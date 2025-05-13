@@ -41,7 +41,7 @@ mol_harvester/
 ├── hive/                      # Hive table definitions
 ├── kafka/                     # Kafka utilities (optional)
 └── README.md                  # Project documentation
-
+```
 ---
 
 ## 🗺️ Status
