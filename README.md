@@ -27,20 +27,21 @@ This project is ideal for exploring chemical space data, with an emphasis on pat
 ---
 
 ## 📁 Project Structure
-'''
+
+```text
 mol_harvester/
 ├── data/
-│ ├── lake/
-│ │ ├── SureChemBL
-│ │ └── ...
-│ └── warehouse/ # Structured, analytics-ready data (via Hive)
-├── etl/ # Extraction and transformation logic
-├── spark_jobs/ # Spark-based processing scripts
-├── airflow/ # Airflow DAGs for orchestration
-├── hive/ # Hive table definitions
-├── kafka/ # Kafka utilities (optional)
-└── README.md
-'''
+│   ├── lake/
+│   │   ├── SureChemBL/        # Raw data files (e.g., SureChemBL)
+│   │   └── ...                # Other raw data sources
+│   └── warehouse/             # Structured, analytics-ready data (via Hive)
+├── etl/                       # Extraction and transformation logic
+├── spark_jobs/                # Spark-based processing scripts
+├── airflow/                   # Airflow DAGs for orchestration
+├── hive/                      # Hive table definitions
+├── kafka/                     # Kafka utilities (optional)
+└── README.md                  # Project documentation
+
 ---
 
 ## 🗺️ Status
