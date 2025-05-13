@@ -18,7 +18,7 @@ This project is ideal for exploring chemical space data, with an emphasis on pat
 
 | Stage        | Tool(s)         | Role                                                                 |
 |--------------|-----------------|----------------------------------------------------------------------|
-| **Storage**   | 🧱 HDFS          | Store raw and intermediate SureChemBL data (e.g., Parquet)           |
+| **Storage**   | 🧱 Hadoop          | Store raw and intermediate data           |
 | **Ingestion** | 🔄 Kafka | Simulate streaming updates (i.e. new patents)                       |
 | **Processing**| ⚡ Spark         | Transform, clean, and join data at scale                             |
 | **Querying**  | 🐝 Hive          | Define warehouse schema, enable SQL queries                          |
