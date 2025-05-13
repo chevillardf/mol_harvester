@@ -19,7 +19,7 @@ This project is ideal for exploring chemical space data, with an emphasis on pat
 | Stage        | Tool(s)         | Role                                                                 |
 |--------------|-----------------|----------------------------------------------------------------------|
 | **Storage**   | 🧱 HDFS          | Store raw and intermediate SureChemBL data (e.g., Parquet)           |
-| **Ingestion** | 🔄 Kafka (optional) | Simulate streaming updates (e.g., new patents)                       |
+| **Ingestion** | 🔄 Kafka | Simulate streaming updates (e.g., new patents)                       |
 | **Processing**| ⚡ Spark         | Transform, clean, and join data at scale                             |
 | **Querying**  | 🐝 Hive          | Define warehouse schema, enable SQL queries                          |
 | **Orchestration** | 📅 Airflow   | Automate ETL workflows (e.g., extract ➝ transform ➝ load)            |
@@ -27,7 +27,7 @@ This project is ideal for exploring chemical space data, with an emphasis on pat
 ---
 
 ## 📁 Project Structure
-
+'''
 mol_harvester/
 ├── data/
 │ ├── lake/
@@ -40,7 +40,7 @@ mol_harvester/
 ├── hive/ # Hive table definitions
 ├── kafka/ # Kafka utilities (optional)
 └── README.md
-
+'''
 ---
 
 ## 🗺️ Status
