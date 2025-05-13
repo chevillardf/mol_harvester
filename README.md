@@ -19,10 +19,10 @@ This project is ideal for exploring chemical space data, with an emphasis on pat
 | Stage        | Tool(s)         | Role                                                                 |
 |--------------|-----------------|----------------------------------------------------------------------|
 | **Storage**   | 🧱 HDFS          | Store raw and intermediate SureChemBL data (e.g., Parquet)           |
-| **Ingestion** | 🔄 Kafka | Simulate streaming updates (e.g., new patents)                       |
+| **Ingestion** | 🔄 Kafka | Simulate streaming updates (i.e. new patents)                       |
 | **Processing**| ⚡ Spark         | Transform, clean, and join data at scale                             |
 | **Querying**  | 🐝 Hive          | Define warehouse schema, enable SQL queries                          |
-| **Orchestration** | 📅 Airflow   | Automate ETL workflows (e.g., extract ➝ transform ➝ load)            |
+| **Orchestration** | 📅 Airflow   | Automate ETL workflows            |
 
 ---
 
@@ -31,16 +31,16 @@ This project is ideal for exploring chemical space data, with an emphasis on pat
 ```text
 mol_harvester/
 ├── data/
-│   ├── lake/
-│   │   ├── SureChemBL/        # Raw data files (e.g., SureChemBL)
-│   │   └── ...                # Other raw data sources
-│   └── warehouse/             # Structured, analytics-ready data (via Hive)
-├── etl/                       # Extraction and transformation logic
+│   ├── lake/                  # Raw data files
+│   │   ├── SureChemBL/        
+│   │   └── ...                
+│   └── warehouse/             # Structured, processed data
+├── etl/                       # Extraction, transformation and loading logic
 ├── spark_jobs/                # Spark-based processing scripts
 ├── airflow/                   # Airflow DAGs for orchestration
 ├── hive/                      # Hive table definitions
-├── kafka/                     # Kafka utilities (optional)
-└── README.md                  # Project documentation
+├── kafka/                     # Kafka utilities
+└── README.md                  
 ```
 ---
 
@@ -54,7 +54,7 @@ mol_harvester/
 
 ## 📌 Notes
 
-- This project assumes access to a working Apache stack (e.g., Hadoop, Spark, Hive).
-- For local development, Docker and/or Minikube setups can be used to simulate the environment.
+- This project assumes access to a working Apache stack (Hadoop, Spark, Hive, ...).
+- For local development, Docker can be used to simulate the environment.
 
 
