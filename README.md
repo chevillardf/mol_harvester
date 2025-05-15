@@ -1,8 +1,6 @@
 # 🧪 mol_harvester
 
-**mol_harvester** is a data engineering project designed to extract, transform, and load large molecular data from **SureChemBL**. The goal is to build a scalable and modular ETL pipeline using modern **Apache big data tools**.
-
-This project is ideal for exploring chemical space data, with an emphasis on patent-sourced molecules..
+**mol_harvester** is a scalable ETL pipeline for processing large-scale molecular data from SureChemBL patents, built using modern Apache data engineering tools.
 
 ---
 
@@ -19,7 +17,7 @@ This project is ideal for exploring chemical space data, with an emphasis on pat
 | Stage        | Tool(s)         | Role                                                                 |
 |--------------|-----------------|----------------------------------------------------------------------|
 | **Storage**   | 🧱 Hadoop          | Store raw and intermediate data           |
-| **Ingestion** | 🔄 Kafka | Simulate streaming updates (i.e. new patents)                       |
+| **Ingestion** | 🔄 Kafka | Updates (i.e. new patents)                       |
 | **Processing**| ⚡ Spark         | Transform, clean, and join data at scale                             |
 | **Querying**  | 🐝 Hive          | Define warehouse schema, enable SQL queries                          |
 | **Orchestration** | 📅 Airflow   | Automate ETL workflows            |
