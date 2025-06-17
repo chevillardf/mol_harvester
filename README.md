@@ -29,10 +29,10 @@
 ```text
 mol_harvester/
 ├── data/
-│   ├── lake/                  # Raw data files
+│   ├── raw/                  # Raw data files
 │   │   ├── SureChemBL/        
 │   │   └── ...                
-│   └── warehouse/             # Structured, processed data
+│   └── processed/             # Structured, processed data
 ├── etl/                       # Extraction, transformation and loading logic
 ├── spark_jobs/                # Spark-based processing scripts
 ├── airflow/                   # Airflow DAGs for orchestration
