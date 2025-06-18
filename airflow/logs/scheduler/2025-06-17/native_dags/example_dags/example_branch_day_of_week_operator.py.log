@@ -1,0 +1,11 @@
+[2025-06-17T15:57:13.558+0200] {processor.py:161} INFO - Started process (PID=240329) to work on /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py
+[2025-06-17T15:57:13.559+0200] {processor.py:830} INFO - Processing file /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py for tasks to queue
+[2025-06-17T15:57:13.561+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:13.560+0200] {dagbag.py:545} INFO - Filling up the DagBag from /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py
+[2025-06-17T15:57:13.569+0200] {processor.py:840} INFO - DAG(s) 'example_weekday_branch_operator' retrieved from /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py
+[2025-06-17T15:57:13.629+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:13.628+0200] {override.py:1829} INFO - Created Permission View: can read on DAG:example_weekday_branch_operator
+[2025-06-17T15:57:13.635+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:13.634+0200] {override.py:1829} INFO - Created Permission View: can delete on DAG:example_weekday_branch_operator
+[2025-06-17T15:57:13.639+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:13.639+0200] {override.py:1829} INFO - Created Permission View: can edit on DAG:example_weekday_branch_operator
+[2025-06-17T15:57:13.640+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:13.639+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-17T15:57:13.645+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:13.645+0200] {dag.py:3118} INFO - Creating ORM DAG for example_weekday_branch_operator
+[2025-06-17T15:57:13.650+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:13.650+0200] {dag.py:3954} INFO - Setting next_dagrun for example_weekday_branch_operator to 2025-06-16 00:00:00+00:00, run_after=2025-06-17 00:00:00+00:00
+[2025-06-17T15:57:13.660+0200] {processor.py:183} INFO - Processing /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py took 0.109 seconds

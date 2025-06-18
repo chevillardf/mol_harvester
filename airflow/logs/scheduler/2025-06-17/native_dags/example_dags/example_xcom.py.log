@@ -1,0 +1,11 @@
+[2025-06-17T15:57:12.048+0200] {processor.py:161} INFO - Started process (PID=240310) to work on /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_xcom.py
+[2025-06-17T15:57:12.048+0200] {processor.py:830} INFO - Processing file /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_xcom.py for tasks to queue
+[2025-06-17T15:57:12.049+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:12.049+0200] {dagbag.py:545} INFO - Filling up the DagBag from /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_xcom.py
+[2025-06-17T15:57:12.053+0200] {processor.py:840} INFO - DAG(s) 'example_xcom' retrieved from /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_xcom.py
+[2025-06-17T15:57:12.105+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:12.105+0200] {override.py:1829} INFO - Created Permission View: can read on DAG:example_xcom
+[2025-06-17T15:57:12.110+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:12.110+0200] {override.py:1829} INFO - Created Permission View: can delete on DAG:example_xcom
+[2025-06-17T15:57:12.114+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:12.114+0200] {override.py:1829} INFO - Created Permission View: can edit on DAG:example_xcom
+[2025-06-17T15:57:12.114+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:12.114+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-17T15:57:12.119+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:12.119+0200] {dag.py:3118} INFO - Creating ORM DAG for example_xcom
+[2025-06-17T15:57:12.123+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:12.122+0200] {dag.py:3954} INFO - Setting next_dagrun for example_xcom to 2021-01-01 00:00:00+00:00, run_after=2021-01-01 00:00:00+00:00
+[2025-06-17T15:57:12.131+0200] {processor.py:183} INFO - Processing /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_xcom.py took 0.088 seconds

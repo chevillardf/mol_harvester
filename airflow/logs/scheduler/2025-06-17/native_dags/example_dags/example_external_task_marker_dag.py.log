@@ -1,0 +1,16 @@
+[2025-06-17T15:57:28.973+0200] {processor.py:161} INFO - Started process (PID=240500) to work on /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2025-06-17T15:57:28.974+0200] {processor.py:830} INFO - Processing file /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_external_task_marker_dag.py for tasks to queue
+[2025-06-17T15:57:28.975+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:28.974+0200] {dagbag.py:545} INFO - Filling up the DagBag from /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2025-06-17T15:57:28.979+0200] {processor.py:840} INFO - DAG(s) 'example_external_task_marker_child', 'example_external_task_marker_parent' retrieved from /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2025-06-17T15:57:29.040+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:29.040+0200] {override.py:1829} INFO - Created Permission View: can read on DAG:example_external_task_marker_child
+[2025-06-17T15:57:29.046+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:29.046+0200] {override.py:1829} INFO - Created Permission View: can delete on DAG:example_external_task_marker_child
+[2025-06-17T15:57:29.052+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:29.052+0200] {override.py:1829} INFO - Created Permission View: can edit on DAG:example_external_task_marker_child
+[2025-06-17T15:57:29.063+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:29.063+0200] {override.py:1829} INFO - Created Permission View: can read on DAG:example_external_task_marker_parent
+[2025-06-17T15:57:29.068+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:29.067+0200] {override.py:1829} INFO - Created Permission View: can delete on DAG:example_external_task_marker_parent
+[2025-06-17T15:57:29.072+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:29.072+0200] {override.py:1829} INFO - Created Permission View: can edit on DAG:example_external_task_marker_parent
+[2025-06-17T15:57:29.073+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:29.072+0200] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-06-17T15:57:29.081+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:29.081+0200] {dag.py:3118} INFO - Creating ORM DAG for example_external_task_marker_child
+[2025-06-17T15:57:29.082+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:29.082+0200] {dag.py:3118} INFO - Creating ORM DAG for example_external_task_marker_parent
+[2025-06-17T15:57:29.082+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:29.082+0200] {dag.py:3954} INFO - Setting next_dagrun for example_external_task_marker_child to None, run_after=None
+[2025-06-17T15:57:29.083+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:29.083+0200] {dag.py:3954} INFO - Setting next_dagrun for example_external_task_marker_parent to None, run_after=None
+[2025-06-17T15:57:29.097+0200] {processor.py:183} INFO - Processing /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/example_external_task_marker_dag.py took 0.130 seconds

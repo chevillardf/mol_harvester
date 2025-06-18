@@ -1,0 +1,11 @@
+[2025-06-17T15:57:06.708+0200] {processor.py:161} INFO - Started process (PID=240229) to work on /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/tutorial_dag.py
+[2025-06-17T15:57:06.709+0200] {processor.py:830} INFO - Processing file /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2025-06-17T15:57:06.710+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:06.710+0200] {dagbag.py:545} INFO - Filling up the DagBag from /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/tutorial_dag.py
+[2025-06-17T15:57:06.715+0200] {processor.py:840} INFO - DAG(s) 'tutorial_dag' retrieved from /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/tutorial_dag.py
+[2025-06-17T15:57:06.769+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:06.769+0200] {override.py:1829} INFO - Created Permission View: can read on DAG:tutorial_dag
+[2025-06-17T15:57:06.774+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:06.774+0200] {override.py:1829} INFO - Created Permission View: can delete on DAG:tutorial_dag
+[2025-06-17T15:57:06.777+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:06.777+0200] {override.py:1829} INFO - Created Permission View: can edit on DAG:tutorial_dag
+[2025-06-17T15:57:06.778+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:06.777+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-17T15:57:06.782+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:06.782+0200] {dag.py:3118} INFO - Creating ORM DAG for tutorial_dag
+[2025-06-17T15:57:06.782+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:06.782+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2025-06-17T15:57:06.791+0200] {processor.py:183} INFO - Processing /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/tutorial_dag.py took 0.088 seconds

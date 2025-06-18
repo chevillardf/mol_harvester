@@ -1,0 +1,11 @@
+[2025-06-17T15:56:51.992+0200] {processor.py:161} INFO - Started process (PID=240057) to work on /home/florent/Documents/projects/mol_harvester/airflow/dags/chembl_assay_etl.py
+[2025-06-17T15:56:51.993+0200] {processor.py:830} INFO - Processing file /home/florent/Documents/projects/mol_harvester/airflow/dags/chembl_assay_etl.py for tasks to queue
+[2025-06-17T15:56:51.994+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:56:51.994+0200] {dagbag.py:545} INFO - Filling up the DagBag from /home/florent/Documents/projects/mol_harvester/airflow/dags/chembl_assay_etl.py
+[2025-06-17T15:56:52.596+0200] {processor.py:840} INFO - DAG(s) 'chembl_assay_etl' retrieved from /home/florent/Documents/projects/mol_harvester/airflow/dags/chembl_assay_etl.py
+[2025-06-17T15:56:52.641+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:56:52.641+0200] {override.py:1829} INFO - Created Permission View: can read on DAG:chembl_assay_etl
+[2025-06-17T15:56:52.646+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:56:52.646+0200] {override.py:1829} INFO - Created Permission View: can delete on DAG:chembl_assay_etl
+[2025-06-17T15:56:52.649+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:56:52.649+0200] {override.py:1829} INFO - Created Permission View: can edit on DAG:chembl_assay_etl
+[2025-06-17T15:56:52.649+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:56:52.649+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-17T15:56:52.654+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:56:52.654+0200] {dag.py:3118} INFO - Creating ORM DAG for chembl_assay_etl
+[2025-06-17T15:56:52.654+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:56:52.654+0200] {dag.py:3954} INFO - Setting next_dagrun for chembl_assay_etl to None, run_after=None
+[2025-06-17T15:56:52.662+0200] {processor.py:183} INFO - Processing /home/florent/Documents/projects/mol_harvester/airflow/dags/chembl_assay_etl.py took 0.672 seconds

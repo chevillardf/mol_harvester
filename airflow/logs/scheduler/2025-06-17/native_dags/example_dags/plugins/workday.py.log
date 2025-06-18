@@ -1,0 +1,5 @@
+[2025-06-17T15:57:40.503+0200] {processor.py:161} INFO - Started process (PID=240623) to work on /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py
+[2025-06-17T15:57:40.504+0200] {processor.py:830} INFO - Processing file /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-06-17T15:57:40.506+0200] {logging_mixin.py:188} INFO - [2025-06-17T15:57:40.506+0200] {dagbag.py:545} INFO - Filling up the DagBag from /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py
+[2025-06-17T15:57:40.787+0200] {processor.py:842} WARNING - No viable dags retrieved from /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py
+[2025-06-17T15:57:40.790+0200] {processor.py:183} INFO - Processing /home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py took 0.293 seconds
