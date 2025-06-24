@@ -1,6 +1,6 @@
 # 🧪 mol_harvester
 
-**mol_harvester** is a scalable ETL pipeline for processing large-scale molecular data from SureChemBL patents, built using modern Apache data engineering tools.
+**mol_harvester** is a scalable ETL pipeline for processing large-scale molecular data from ChemBL, built using modern Apache data engineering tools.
 
 ---
 
@@ -17,8 +17,8 @@
 | Stage        | Tool(s)         | Role                                                                 |
 |--------------|-----------------|----------------------------------------------------------------------|
 | **Storage**   | 🧱 Hadoop          | Store raw and intermediate data           |
-| **Ingestion** | 🔄 Kafka | Updates (i.e. new patents)                       |
-| **Processing**| ⚡ Spark         | Transform, clean, and join data at scale                             |
+| **Ingestion** | 🔄 Kafka | Updates                       |
+| **Processing**| ⚡ Spark         | Transform data at scale                             |
 | **Querying**  | 🐝 Hive          | Define warehouse schema, enable SQL queries                          |
 | **Orchestration** | 📅 Airflow   | Automate ETL workflows            |
 
@@ -29,24 +29,22 @@
 ```text
 mol_harvester/
 ├── data/
-│   ├── raw/                  # Raw data files
-│   │   ├── SureChemBL/        
-│   │   └── ...                
-│   └── processed/             # Structured, processed data
-├── etl/                       # Extraction, transformation and loading logic
-├── spark_jobs/                # Spark-based processing scripts
-├── airflow/                   # Airflow DAGs for orchestration
-├── hive/                      # Hive table definitions
-├── kafka/                     # Kafka utilities
-└── README.md                  
+│   ├── raw/
+│   ├── staging/
+│   └── processed/
+├── etl/
+├── spark_jobs/                
+├── airflow/
+├── hive/
+├── kafka/
+└── README.md
 ```
 ---
 
 ## 🗺️ Status
 
-✅ Data sources (SureChemBL)  
-🔜 Transformation using Spark  
-🔜 Warehouse definition with Hive
+✅ Data sources (ChemBL)
+🔜 ETL with airflow
 
 ---
 
