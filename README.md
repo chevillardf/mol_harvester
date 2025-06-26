@@ -44,7 +44,7 @@ mol_harvester/
 ## 🗺️ Status
 
 ✅ Data sources (ChemBL)
-🔜 ETL with airflow
+🔜 ETL MVP
 
 ---
 
