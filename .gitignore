@@ -1,2 +1,4 @@
 data/*/*
 notebooks/.ipynb*
+airflow/*
+!airflow/dags/
