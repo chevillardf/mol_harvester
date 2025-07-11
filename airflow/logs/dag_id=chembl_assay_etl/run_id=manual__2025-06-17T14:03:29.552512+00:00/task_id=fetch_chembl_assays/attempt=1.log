@@ -1,0 +1,861 @@
+[2025-07-11T11:03:07.035+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-07-11T11:03:07.043+0200] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: chembl_assay_etl.fetch_chembl_assays manual__2025-06-17T14:03:29.552512+00:00 [queued]>
+[2025-07-11T11:03:07.045+0200] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: chembl_assay_etl.fetch_chembl_assays manual__2025-06-17T14:03:29.552512+00:00 [queued]>
+[2025-07-11T11:03:07.045+0200] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-07-11T11:03:07.051+0200] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_chembl_assays> on 2025-06-17 14:03:29.552512+00:00
+[2025-07-11T11:03:07.053+0200] {standard_task_runner.py:63} INFO - Started process 41975 to run task
+[2025-07-11T11:03:07.055+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'chembl_assay_etl', 'fetch_chembl_assays', 'manual__2025-06-17T14:03:29.552512+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/chembl_assay_etl.py', '--cfg-path', '/tmp/tmp13uyu5vq']
+[2025-07-11T11:03:07.056+0200] {standard_task_runner.py:91} INFO - Job 5: Subtask fetch_chembl_assays
+[2025-07-11T11:03:07.072+0200] {task_command.py:426} INFO - Running <TaskInstance: chembl_assay_etl.fetch_chembl_assays manual__2025-06-17T14:03:29.552512+00:00 [running]> on host p14s
+[2025-07-11T11:03:07.101+0200] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='florent' AIRFLOW_CTX_DAG_ID='chembl_assay_etl' AIRFLOW_CTX_TASK_ID='fetch_chembl_assays' AIRFLOW_CTX_EXECUTION_DATE='2025-06-17T14:03:29.552512+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-17T14:03:29.552512+00:00'
+[2025-07-11T11:03:07.101+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-07-11T11:03:07.103+0200] {query_set.py:166} INFO - __getitem__, self.limits = (0, 100), k = slice(0, 100, None)
+[2025-07-11T11:03:07.103+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.111+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.111+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 0)]
+[2025-07-11T11:03:07.111+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.112+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.112+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 20)]
+[2025-07-11T11:03:07.112+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.113+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.113+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 40)]
+[2025-07-11T11:03:07.113+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.114+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.114+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 60)]
+[2025-07-11T11:03:07.115+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.116+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.116+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 80)]
+[2025-07-11T11:03:07.116+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.117+0200] {query_set.py:166} INFO - __getitem__, self.limits = (100, 200), k = slice(100, 200, None)
+[2025-07-11T11:03:07.117+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.118+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.118+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 100)]
+[2025-07-11T11:03:07.118+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.119+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.119+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 220)]
+[2025-07-11T11:03:07.119+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.121+0200] {query_set.py:166} INFO - __getitem__, self.limits = (200, 300), k = slice(200, 300, None)
+[2025-07-11T11:03:07.121+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.122+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.122+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 200)]
+[2025-07-11T11:03:07.122+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.123+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.123+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 420)]
+[2025-07-11T11:03:07.123+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.124+0200] {query_set.py:166} INFO - __getitem__, self.limits = (300, 400), k = slice(300, 400, None)
+[2025-07-11T11:03:07.124+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.125+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.125+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 300)]
+[2025-07-11T11:03:07.125+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.126+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.126+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 620)]
+[2025-07-11T11:03:07.126+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.128+0200] {query_set.py:166} INFO - __getitem__, self.limits = (400, 500), k = slice(400, 500, None)
+[2025-07-11T11:03:07.128+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.129+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.129+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 400)]
+[2025-07-11T11:03:07.129+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.130+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.130+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 820)]
+[2025-07-11T11:03:07.130+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.131+0200] {query_set.py:166} INFO - __getitem__, self.limits = (500, 600), k = slice(500, 600, None)
+[2025-07-11T11:03:07.131+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.132+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.132+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 500)]
+[2025-07-11T11:03:07.132+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.133+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.133+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1020)]
+[2025-07-11T11:03:07.133+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.135+0200] {query_set.py:166} INFO - __getitem__, self.limits = (600, 700), k = slice(600, 700, None)
+[2025-07-11T11:03:07.135+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.136+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.136+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 600)]
+[2025-07-11T11:03:07.136+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.137+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.137+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1220)]
+[2025-07-11T11:03:07.137+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.138+0200] {query_set.py:166} INFO - __getitem__, self.limits = (700, 800), k = slice(700, 800, None)
+[2025-07-11T11:03:07.138+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.139+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.139+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 700)]
+[2025-07-11T11:03:07.139+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.140+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.140+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1420)]
+[2025-07-11T11:03:07.140+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.142+0200] {query_set.py:166} INFO - __getitem__, self.limits = (800, 900), k = slice(800, 900, None)
+[2025-07-11T11:03:07.142+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.143+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.143+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 800)]
+[2025-07-11T11:03:07.143+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.144+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.144+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1620)]
+[2025-07-11T11:03:07.144+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.145+0200] {query_set.py:166} INFO - __getitem__, self.limits = (900, 1000), k = slice(900, 1000, None)
+[2025-07-11T11:03:07.145+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.146+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.146+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 900)]
+[2025-07-11T11:03:07.146+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.147+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.147+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1820)]
+[2025-07-11T11:03:07.147+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.149+0200] {query_set.py:166} INFO - __getitem__, self.limits = (1000, 1100), k = slice(1000, 1100, None)
+[2025-07-11T11:03:07.149+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.150+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.150+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1000)]
+[2025-07-11T11:03:07.150+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.151+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.151+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2020)]
+[2025-07-11T11:03:07.151+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.152+0200] {query_set.py:166} INFO - __getitem__, self.limits = (1100, 1200), k = slice(1100, 1200, None)
+[2025-07-11T11:03:07.152+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.153+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.153+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1100)]
+[2025-07-11T11:03:07.153+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.154+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.154+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2220)]
+[2025-07-11T11:03:07.154+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.155+0200] {query_set.py:166} INFO - __getitem__, self.limits = (1200, 1300), k = slice(1200, 1300, None)
+[2025-07-11T11:03:07.156+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.156+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.157+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1200)]
+[2025-07-11T11:03:07.157+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.158+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.158+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2420)]
+[2025-07-11T11:03:07.158+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.159+0200] {query_set.py:166} INFO - __getitem__, self.limits = (1300, 1400), k = slice(1300, 1400, None)
+[2025-07-11T11:03:07.159+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.160+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.160+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1300)]
+[2025-07-11T11:03:07.160+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.161+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.161+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2620)]
+[2025-07-11T11:03:07.161+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.162+0200] {query_set.py:166} INFO - __getitem__, self.limits = (1400, 1500), k = slice(1400, 1500, None)
+[2025-07-11T11:03:07.162+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.163+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.164+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1400)]
+[2025-07-11T11:03:07.164+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.165+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.165+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2820)]
+[2025-07-11T11:03:07.165+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.166+0200] {query_set.py:166} INFO - __getitem__, self.limits = (1500, 1600), k = slice(1500, 1600, None)
+[2025-07-11T11:03:07.166+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.167+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.167+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1500)]
+[2025-07-11T11:03:07.167+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.168+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.168+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3020)]
+[2025-07-11T11:03:07.168+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.169+0200] {query_set.py:166} INFO - __getitem__, self.limits = (1600, 1700), k = slice(1600, 1700, None)
+[2025-07-11T11:03:07.169+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.170+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.170+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1600)]
+[2025-07-11T11:03:07.171+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.172+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.172+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3220)]
+[2025-07-11T11:03:07.172+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.173+0200] {query_set.py:166} INFO - __getitem__, self.limits = (1700, 1800), k = slice(1700, 1800, None)
+[2025-07-11T11:03:07.173+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.174+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.174+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1700)]
+[2025-07-11T11:03:07.174+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.175+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.175+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3420)]
+[2025-07-11T11:03:07.175+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.176+0200] {query_set.py:166} INFO - __getitem__, self.limits = (1800, 1900), k = slice(1800, 1900, None)
+[2025-07-11T11:03:07.176+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.177+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.177+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1800)]
+[2025-07-11T11:03:07.177+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.178+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.179+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3620)]
+[2025-07-11T11:03:07.179+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.180+0200] {query_set.py:166} INFO - __getitem__, self.limits = (1900, 2000), k = slice(1900, 2000, None)
+[2025-07-11T11:03:07.180+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.181+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.181+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 1900)]
+[2025-07-11T11:03:07.181+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.182+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.182+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3820)]
+[2025-07-11T11:03:07.182+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.183+0200] {query_set.py:166} INFO - __getitem__, self.limits = (2000, 2100), k = slice(2000, 2100, None)
+[2025-07-11T11:03:07.183+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.184+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.184+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2000)]
+[2025-07-11T11:03:07.184+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.185+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.185+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4020)]
+[2025-07-11T11:03:07.185+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.187+0200] {query_set.py:166} INFO - __getitem__, self.limits = (2100, 2200), k = slice(2100, 2200, None)
+[2025-07-11T11:03:07.187+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.188+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.188+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2100)]
+[2025-07-11T11:03:07.188+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.189+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.189+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4220)]
+[2025-07-11T11:03:07.189+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.190+0200] {query_set.py:166} INFO - __getitem__, self.limits = (2200, 2300), k = slice(2200, 2300, None)
+[2025-07-11T11:03:07.190+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.191+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.191+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2200)]
+[2025-07-11T11:03:07.191+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.192+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.192+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4420)]
+[2025-07-11T11:03:07.192+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.193+0200] {query_set.py:166} INFO - __getitem__, self.limits = (2300, 2400), k = slice(2300, 2400, None)
+[2025-07-11T11:03:07.193+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.194+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.195+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2300)]
+[2025-07-11T11:03:07.195+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.196+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.196+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4620)]
+[2025-07-11T11:03:07.196+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.197+0200] {query_set.py:166} INFO - __getitem__, self.limits = (2400, 2500), k = slice(2400, 2500, None)
+[2025-07-11T11:03:07.197+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.198+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.198+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2400)]
+[2025-07-11T11:03:07.198+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.199+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.199+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4820)]
+[2025-07-11T11:03:07.199+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.200+0200] {query_set.py:166} INFO - __getitem__, self.limits = (2500, 2600), k = slice(2500, 2600, None)
+[2025-07-11T11:03:07.200+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.201+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.201+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2500)]
+[2025-07-11T11:03:07.201+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.202+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.202+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5020)]
+[2025-07-11T11:03:07.203+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.204+0200] {query_set.py:166} INFO - __getitem__, self.limits = (2600, 2700), k = slice(2600, 2700, None)
+[2025-07-11T11:03:07.204+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.205+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.205+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2600)]
+[2025-07-11T11:03:07.205+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.206+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.206+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5220)]
+[2025-07-11T11:03:07.206+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.207+0200] {query_set.py:166} INFO - __getitem__, self.limits = (2700, 2800), k = slice(2700, 2800, None)
+[2025-07-11T11:03:07.207+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.208+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.208+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2700)]
+[2025-07-11T11:03:07.208+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.209+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.209+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5420)]
+[2025-07-11T11:03:07.209+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.210+0200] {query_set.py:166} INFO - __getitem__, self.limits = (2800, 2900), k = slice(2800, 2900, None)
+[2025-07-11T11:03:07.211+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.212+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.212+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2800)]
+[2025-07-11T11:03:07.212+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.213+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.213+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5620)]
+[2025-07-11T11:03:07.213+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.214+0200] {query_set.py:166} INFO - __getitem__, self.limits = (2900, 3000), k = slice(2900, 3000, None)
+[2025-07-11T11:03:07.214+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.215+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.215+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 2900)]
+[2025-07-11T11:03:07.215+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.216+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.216+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5820)]
+[2025-07-11T11:03:07.216+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.217+0200] {query_set.py:166} INFO - __getitem__, self.limits = (3000, 3100), k = slice(3000, 3100, None)
+[2025-07-11T11:03:07.217+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.218+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.218+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3000)]
+[2025-07-11T11:03:07.219+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.219+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.220+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6020)]
+[2025-07-11T11:03:07.220+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.221+0200] {query_set.py:166} INFO - __getitem__, self.limits = (3100, 3200), k = slice(3100, 3200, None)
+[2025-07-11T11:03:07.221+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.222+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.222+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3100)]
+[2025-07-11T11:03:07.222+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.223+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.223+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6220)]
+[2025-07-11T11:03:07.223+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.224+0200] {query_set.py:166} INFO - __getitem__, self.limits = (3200, 3300), k = slice(3200, 3300, None)
+[2025-07-11T11:03:07.224+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.225+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.225+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3200)]
+[2025-07-11T11:03:07.225+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.226+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.226+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6420)]
+[2025-07-11T11:03:07.226+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.228+0200] {query_set.py:166} INFO - __getitem__, self.limits = (3300, 3400), k = slice(3300, 3400, None)
+[2025-07-11T11:03:07.228+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.229+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.229+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3300)]
+[2025-07-11T11:03:07.229+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.230+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.230+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6620)]
+[2025-07-11T11:03:07.230+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.231+0200] {query_set.py:166} INFO - __getitem__, self.limits = (3400, 3500), k = slice(3400, 3500, None)
+[2025-07-11T11:03:07.231+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.232+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.232+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3400)]
+[2025-07-11T11:03:07.232+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.233+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.233+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6820)]
+[2025-07-11T11:03:07.233+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.234+0200] {query_set.py:166} INFO - __getitem__, self.limits = (3500, 3600), k = slice(3500, 3600, None)
+[2025-07-11T11:03:07.235+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.236+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.236+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3500)]
+[2025-07-11T11:03:07.236+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.237+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.237+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7020)]
+[2025-07-11T11:03:07.237+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.238+0200] {query_set.py:166} INFO - __getitem__, self.limits = (3600, 3700), k = slice(3600, 3700, None)
+[2025-07-11T11:03:07.238+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.239+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.239+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3600)]
+[2025-07-11T11:03:07.239+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.240+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.240+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7220)]
+[2025-07-11T11:03:07.240+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.241+0200] {query_set.py:166} INFO - __getitem__, self.limits = (3700, 3800), k = slice(3700, 3800, None)
+[2025-07-11T11:03:07.241+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.242+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.242+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3700)]
+[2025-07-11T11:03:07.243+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.244+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.244+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7420)]
+[2025-07-11T11:03:07.244+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.245+0200] {query_set.py:166} INFO - __getitem__, self.limits = (3800, 3900), k = slice(3800, 3900, None)
+[2025-07-11T11:03:07.245+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.246+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.246+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3800)]
+[2025-07-11T11:03:07.246+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.247+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.247+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7620)]
+[2025-07-11T11:03:07.247+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.248+0200] {query_set.py:166} INFO - __getitem__, self.limits = (3900, 4000), k = slice(3900, 4000, None)
+[2025-07-11T11:03:07.248+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.249+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.249+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 3900)]
+[2025-07-11T11:03:07.249+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.250+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.250+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7820)]
+[2025-07-11T11:03:07.250+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.252+0200] {query_set.py:166} INFO - __getitem__, self.limits = (4000, 4100), k = slice(4000, 4100, None)
+[2025-07-11T11:03:07.252+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.253+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.253+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4000)]
+[2025-07-11T11:03:07.253+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.254+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.254+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8020)]
+[2025-07-11T11:03:07.254+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.255+0200] {query_set.py:166} INFO - __getitem__, self.limits = (4100, 4200), k = slice(4100, 4200, None)
+[2025-07-11T11:03:07.255+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.256+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.256+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4100)]
+[2025-07-11T11:03:07.256+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.257+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.257+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8220)]
+[2025-07-11T11:03:07.257+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.258+0200] {query_set.py:166} INFO - __getitem__, self.limits = (4200, 4300), k = slice(4200, 4300, None)
+[2025-07-11T11:03:07.259+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.260+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.260+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4200)]
+[2025-07-11T11:03:07.260+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.261+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.261+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8420)]
+[2025-07-11T11:03:07.261+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.262+0200] {query_set.py:166} INFO - __getitem__, self.limits = (4300, 4400), k = slice(4300, 4400, None)
+[2025-07-11T11:03:07.262+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.263+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.263+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4300)]
+[2025-07-11T11:03:07.263+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.264+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.264+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8620)]
+[2025-07-11T11:03:07.264+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.265+0200] {query_set.py:166} INFO - __getitem__, self.limits = (4400, 4500), k = slice(4400, 4500, None)
+[2025-07-11T11:03:07.265+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.266+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.266+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4400)]
+[2025-07-11T11:03:07.267+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.268+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.268+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8820)]
+[2025-07-11T11:03:07.268+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.269+0200] {query_set.py:166} INFO - __getitem__, self.limits = (4500, 4600), k = slice(4500, 4600, None)
+[2025-07-11T11:03:07.269+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.270+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.270+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4500)]
+[2025-07-11T11:03:07.270+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.271+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.271+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9020)]
+[2025-07-11T11:03:07.271+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.272+0200] {query_set.py:166} INFO - __getitem__, self.limits = (4600, 4700), k = slice(4600, 4700, None)
+[2025-07-11T11:03:07.272+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.273+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.273+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4600)]
+[2025-07-11T11:03:07.273+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.274+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.274+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9220)]
+[2025-07-11T11:03:07.275+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.276+0200] {query_set.py:166} INFO - __getitem__, self.limits = (4700, 4800), k = slice(4700, 4800, None)
+[2025-07-11T11:03:07.276+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.277+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.277+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4700)]
+[2025-07-11T11:03:07.277+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.278+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.278+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9420)]
+[2025-07-11T11:03:07.278+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.279+0200] {query_set.py:166} INFO - __getitem__, self.limits = (4800, 4900), k = slice(4800, 4900, None)
+[2025-07-11T11:03:07.279+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.280+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.280+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4800)]
+[2025-07-11T11:03:07.280+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.281+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.281+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9620)]
+[2025-07-11T11:03:07.281+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.283+0200] {query_set.py:166} INFO - __getitem__, self.limits = (4900, 5000), k = slice(4900, 5000, None)
+[2025-07-11T11:03:07.283+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.284+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.284+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 4900)]
+[2025-07-11T11:03:07.284+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.285+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.285+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9820)]
+[2025-07-11T11:03:07.285+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.286+0200] {query_set.py:166} INFO - __getitem__, self.limits = (5000, 5100), k = slice(5000, 5100, None)
+[2025-07-11T11:03:07.286+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.287+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.287+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5000)]
+[2025-07-11T11:03:07.287+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.288+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.288+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 10020)]
+[2025-07-11T11:03:07.288+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.289+0200] {query_set.py:166} INFO - __getitem__, self.limits = (5100, 5200), k = slice(5100, 5200, None)
+[2025-07-11T11:03:07.289+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.290+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.290+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5100)]
+[2025-07-11T11:03:07.291+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.292+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.292+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 10220)]
+[2025-07-11T11:03:07.292+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.293+0200] {query_set.py:166} INFO - __getitem__, self.limits = (5200, 5300), k = slice(5200, 5300, None)
+[2025-07-11T11:03:07.293+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.294+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.294+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5200)]
+[2025-07-11T11:03:07.294+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.295+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.295+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 10420)]
+[2025-07-11T11:03:07.295+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.296+0200] {query_set.py:166} INFO - __getitem__, self.limits = (5300, 5400), k = slice(5300, 5400, None)
+[2025-07-11T11:03:07.296+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.297+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.297+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5300)]
+[2025-07-11T11:03:07.297+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.298+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.298+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 10620)]
+[2025-07-11T11:03:07.299+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.300+0200] {query_set.py:166} INFO - __getitem__, self.limits = (5400, 5500), k = slice(5400, 5500, None)
+[2025-07-11T11:03:07.300+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.301+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.301+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5400)]
+[2025-07-11T11:03:07.301+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.302+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.302+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 10820)]
+[2025-07-11T11:03:07.302+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.303+0200] {query_set.py:166} INFO - __getitem__, self.limits = (5500, 5600), k = slice(5500, 5600, None)
+[2025-07-11T11:03:07.303+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.304+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.304+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5500)]
+[2025-07-11T11:03:07.304+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.305+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.305+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 11020)]
+[2025-07-11T11:03:07.305+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.307+0200] {query_set.py:166} INFO - __getitem__, self.limits = (5600, 5700), k = slice(5600, 5700, None)
+[2025-07-11T11:03:07.307+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.308+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.308+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5600)]
+[2025-07-11T11:03:07.308+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.309+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.309+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 11220)]
+[2025-07-11T11:03:07.309+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.310+0200] {query_set.py:166} INFO - __getitem__, self.limits = (5700, 5800), k = slice(5700, 5800, None)
+[2025-07-11T11:03:07.310+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.311+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.311+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5700)]
+[2025-07-11T11:03:07.311+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.312+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.312+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 11420)]
+[2025-07-11T11:03:07.312+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.313+0200] {query_set.py:166} INFO - __getitem__, self.limits = (5800, 5900), k = slice(5800, 5900, None)
+[2025-07-11T11:03:07.314+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.314+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.315+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5800)]
+[2025-07-11T11:03:07.315+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.316+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.316+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 11620)]
+[2025-07-11T11:03:07.316+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.317+0200] {query_set.py:166} INFO - __getitem__, self.limits = (5900, 6000), k = slice(5900, 6000, None)
+[2025-07-11T11:03:07.317+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.318+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.318+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 5900)]
+[2025-07-11T11:03:07.318+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.319+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.319+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 11820)]
+[2025-07-11T11:03:07.319+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.320+0200] {query_set.py:166} INFO - __getitem__, self.limits = (6000, 6100), k = slice(6000, 6100, None)
+[2025-07-11T11:03:07.320+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.321+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.321+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6000)]
+[2025-07-11T11:03:07.322+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.323+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.323+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 12020)]
+[2025-07-11T11:03:07.323+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.324+0200] {query_set.py:166} INFO - __getitem__, self.limits = (6100, 6200), k = slice(6100, 6200, None)
+[2025-07-11T11:03:07.324+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.325+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.325+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6100)]
+[2025-07-11T11:03:07.325+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.326+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.326+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 12220)]
+[2025-07-11T11:03:07.326+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.327+0200] {query_set.py:166} INFO - __getitem__, self.limits = (6200, 6300), k = slice(6200, 6300, None)
+[2025-07-11T11:03:07.327+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.328+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.328+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6200)]
+[2025-07-11T11:03:07.328+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.329+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.329+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 12420)]
+[2025-07-11T11:03:07.329+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.331+0200] {query_set.py:166} INFO - __getitem__, self.limits = (6300, 6400), k = slice(6300, 6400, None)
+[2025-07-11T11:03:07.331+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.332+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.332+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6300)]
+[2025-07-11T11:03:07.332+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.333+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.333+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 12620)]
+[2025-07-11T11:03:07.333+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.334+0200] {query_set.py:166} INFO - __getitem__, self.limits = (6400, 6500), k = slice(6400, 6500, None)
+[2025-07-11T11:03:07.334+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.335+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.335+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6400)]
+[2025-07-11T11:03:07.335+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.336+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.336+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 12820)]
+[2025-07-11T11:03:07.336+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.337+0200] {query_set.py:166} INFO - __getitem__, self.limits = (6500, 6600), k = slice(6500, 6600, None)
+[2025-07-11T11:03:07.338+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.338+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.339+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6500)]
+[2025-07-11T11:03:07.339+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.340+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.340+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 13020)]
+[2025-07-11T11:03:07.340+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.341+0200] {query_set.py:166} INFO - __getitem__, self.limits = (6600, 6700), k = slice(6600, 6700, None)
+[2025-07-11T11:03:07.341+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.342+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.342+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6600)]
+[2025-07-11T11:03:07.342+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.343+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.343+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 13220)]
+[2025-07-11T11:03:07.343+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.344+0200] {query_set.py:166} INFO - __getitem__, self.limits = (6700, 6800), k = slice(6700, 6800, None)
+[2025-07-11T11:03:07.344+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.345+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.345+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6700)]
+[2025-07-11T11:03:07.345+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.346+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.347+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 13420)]
+[2025-07-11T11:03:07.347+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.348+0200] {query_set.py:166} INFO - __getitem__, self.limits = (6800, 6900), k = slice(6800, 6900, None)
+[2025-07-11T11:03:07.348+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.349+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.349+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6800)]
+[2025-07-11T11:03:07.349+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.350+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.350+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 13620)]
+[2025-07-11T11:03:07.350+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.351+0200] {query_set.py:166} INFO - __getitem__, self.limits = (6900, 7000), k = slice(6900, 7000, None)
+[2025-07-11T11:03:07.351+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.352+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.352+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 6900)]
+[2025-07-11T11:03:07.352+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.353+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.353+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 13820)]
+[2025-07-11T11:03:07.353+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.355+0200] {query_set.py:166} INFO - __getitem__, self.limits = (7000, 7100), k = slice(7000, 7100, None)
+[2025-07-11T11:03:07.355+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.356+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.356+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7000)]
+[2025-07-11T11:03:07.356+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.357+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.357+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 14020)]
+[2025-07-11T11:03:07.357+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.358+0200] {query_set.py:166} INFO - __getitem__, self.limits = (7100, 7200), k = slice(7100, 7200, None)
+[2025-07-11T11:03:07.358+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.359+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.359+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7100)]
+[2025-07-11T11:03:07.359+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.360+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.360+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 14220)]
+[2025-07-11T11:03:07.360+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.361+0200] {query_set.py:166} INFO - __getitem__, self.limits = (7200, 7300), k = slice(7200, 7300, None)
+[2025-07-11T11:03:07.361+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.362+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.362+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7200)]
+[2025-07-11T11:03:07.363+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.364+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.364+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 14420)]
+[2025-07-11T11:03:07.364+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.365+0200] {query_set.py:166} INFO - __getitem__, self.limits = (7300, 7400), k = slice(7300, 7400, None)
+[2025-07-11T11:03:07.365+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.366+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.366+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7300)]
+[2025-07-11T11:03:07.366+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.367+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.367+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 14620)]
+[2025-07-11T11:03:07.367+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.368+0200] {query_set.py:166} INFO - __getitem__, self.limits = (7400, 7500), k = slice(7400, 7500, None)
+[2025-07-11T11:03:07.368+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.369+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.369+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7400)]
+[2025-07-11T11:03:07.369+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.370+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.370+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 14820)]
+[2025-07-11T11:03:07.371+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.372+0200] {query_set.py:166} INFO - __getitem__, self.limits = (7500, 7600), k = slice(7500, 7600, None)
+[2025-07-11T11:03:07.372+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.373+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.373+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7500)]
+[2025-07-11T11:03:07.373+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.374+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.374+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 15020)]
+[2025-07-11T11:03:07.374+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.375+0200] {query_set.py:166} INFO - __getitem__, self.limits = (7600, 7700), k = slice(7600, 7700, None)
+[2025-07-11T11:03:07.375+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.376+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.376+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7600)]
+[2025-07-11T11:03:07.376+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.377+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.377+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 15220)]
+[2025-07-11T11:03:07.377+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.379+0200] {query_set.py:166} INFO - __getitem__, self.limits = (7700, 7800), k = slice(7700, 7800, None)
+[2025-07-11T11:03:07.379+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.380+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.380+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7700)]
+[2025-07-11T11:03:07.380+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.381+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.381+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 15420)]
+[2025-07-11T11:03:07.381+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.382+0200] {query_set.py:166} INFO - __getitem__, self.limits = (7800, 7900), k = slice(7800, 7900, None)
+[2025-07-11T11:03:07.382+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.383+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.383+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7800)]
+[2025-07-11T11:03:07.383+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.384+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.384+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 15620)]
+[2025-07-11T11:03:07.384+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.385+0200] {query_set.py:166} INFO - __getitem__, self.limits = (7900, 8000), k = slice(7900, 8000, None)
+[2025-07-11T11:03:07.385+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.386+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.387+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 7900)]
+[2025-07-11T11:03:07.387+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.388+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.388+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 15820)]
+[2025-07-11T11:03:07.388+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.389+0200] {query_set.py:166} INFO - __getitem__, self.limits = (8000, 8100), k = slice(8000, 8100, None)
+[2025-07-11T11:03:07.389+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.390+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.390+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8000)]
+[2025-07-11T11:03:07.390+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.391+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.391+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 16020)]
+[2025-07-11T11:03:07.391+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.392+0200] {query_set.py:166} INFO - __getitem__, self.limits = (8100, 8200), k = slice(8100, 8200, None)
+[2025-07-11T11:03:07.392+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.393+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.393+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8100)]
+[2025-07-11T11:03:07.393+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.394+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.394+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 16220)]
+[2025-07-11T11:03:07.395+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.396+0200] {query_set.py:166} INFO - __getitem__, self.limits = (8200, 8300), k = slice(8200, 8300, None)
+[2025-07-11T11:03:07.396+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.397+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.397+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8200)]
+[2025-07-11T11:03:07.397+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.398+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.398+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 16420)]
+[2025-07-11T11:03:07.398+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.399+0200] {query_set.py:166} INFO - __getitem__, self.limits = (8300, 8400), k = slice(8300, 8400, None)
+[2025-07-11T11:03:07.399+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.400+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.400+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8300)]
+[2025-07-11T11:03:07.400+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.401+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.401+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 16620)]
+[2025-07-11T11:03:07.401+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.402+0200] {query_set.py:166} INFO - __getitem__, self.limits = (8400, 8500), k = slice(8400, 8500, None)
+[2025-07-11T11:03:07.403+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.404+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.404+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8400)]
+[2025-07-11T11:03:07.404+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.405+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.405+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 16820)]
+[2025-07-11T11:03:07.405+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.406+0200] {query_set.py:166} INFO - __getitem__, self.limits = (8500, 8600), k = slice(8500, 8600, None)
+[2025-07-11T11:03:07.406+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.407+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.407+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8500)]
+[2025-07-11T11:03:07.407+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.408+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.408+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 17020)]
+[2025-07-11T11:03:07.408+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.409+0200] {query_set.py:166} INFO - __getitem__, self.limits = (8600, 8700), k = slice(8600, 8700, None)
+[2025-07-11T11:03:07.410+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.410+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.411+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8600)]
+[2025-07-11T11:03:07.411+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.412+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.412+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 17220)]
+[2025-07-11T11:03:07.412+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.413+0200] {query_set.py:166} INFO - __getitem__, self.limits = (8700, 8800), k = slice(8700, 8800, None)
+[2025-07-11T11:03:07.413+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.414+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.414+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8700)]
+[2025-07-11T11:03:07.414+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.415+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.415+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 17420)]
+[2025-07-11T11:03:07.415+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.416+0200] {query_set.py:166} INFO - __getitem__, self.limits = (8800, 8900), k = slice(8800, 8900, None)
+[2025-07-11T11:03:07.416+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.417+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.417+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8800)]
+[2025-07-11T11:03:07.418+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.419+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.419+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 17620)]
+[2025-07-11T11:03:07.419+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.420+0200] {query_set.py:166} INFO - __getitem__, self.limits = (8900, 9000), k = slice(8900, 9000, None)
+[2025-07-11T11:03:07.420+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.421+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.421+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 8900)]
+[2025-07-11T11:03:07.421+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.422+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.422+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 17820)]
+[2025-07-11T11:03:07.422+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.423+0200] {query_set.py:166} INFO - __getitem__, self.limits = (9000, 9100), k = slice(9000, 9100, None)
+[2025-07-11T11:03:07.423+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.424+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.424+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9000)]
+[2025-07-11T11:03:07.424+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.425+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.426+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 18020)]
+[2025-07-11T11:03:07.426+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.427+0200] {query_set.py:166} INFO - __getitem__, self.limits = (9100, 9200), k = slice(9100, 9200, None)
+[2025-07-11T11:03:07.427+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.428+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.428+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9100)]
+[2025-07-11T11:03:07.428+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.429+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.429+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 18220)]
+[2025-07-11T11:03:07.429+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.430+0200] {query_set.py:166} INFO - __getitem__, self.limits = (9200, 9300), k = slice(9200, 9300, None)
+[2025-07-11T11:03:07.430+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.431+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.431+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9200)]
+[2025-07-11T11:03:07.431+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.432+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.433+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 18420)]
+[2025-07-11T11:03:07.433+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.434+0200] {query_set.py:166} INFO - __getitem__, self.limits = (9300, 9400), k = slice(9300, 9400, None)
+[2025-07-11T11:03:07.434+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.435+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.435+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9300)]
+[2025-07-11T11:03:07.435+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.436+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.436+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 18620)]
+[2025-07-11T11:03:07.436+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.437+0200] {query_set.py:166} INFO - __getitem__, self.limits = (9400, 9500), k = slice(9400, 9500, None)
+[2025-07-11T11:03:07.437+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.438+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.438+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9400)]
+[2025-07-11T11:03:07.438+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.439+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.439+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 18820)]
+[2025-07-11T11:03:07.439+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.441+0200] {query_set.py:166} INFO - __getitem__, self.limits = (9500, 9600), k = slice(9500, 9600, None)
+[2025-07-11T11:03:07.441+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.442+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.442+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9500)]
+[2025-07-11T11:03:07.442+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.443+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.443+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 19020)]
+[2025-07-11T11:03:07.443+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.444+0200] {query_set.py:166} INFO - __getitem__, self.limits = (9600, 9700), k = slice(9600, 9700, None)
+[2025-07-11T11:03:07.444+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.445+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.445+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9600)]
+[2025-07-11T11:03:07.445+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.446+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.446+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 19220)]
+[2025-07-11T11:03:07.446+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.448+0200] {query_set.py:166} INFO - __getitem__, self.limits = (9700, 9800), k = slice(9700, 9800, None)
+[2025-07-11T11:03:07.448+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.449+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.449+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9700)]
+[2025-07-11T11:03:07.449+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.450+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.450+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 19420)]
+[2025-07-11T11:03:07.450+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.451+0200] {query_set.py:166} INFO - __getitem__, self.limits = (9800, 9900), k = slice(9800, 9900, None)
+[2025-07-11T11:03:07.451+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.452+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.452+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9800)]
+[2025-07-11T11:03:07.452+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.453+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.453+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 19620)]
+[2025-07-11T11:03:07.453+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.454+0200] {query_set.py:166} INFO - __getitem__, self.limits = (9900, 10000), k = slice(9900, 10000, None)
+[2025-07-11T11:03:07.455+0200] {url_query.py:76} INFO - resetting chunk
+[2025-07-11T11:03:07.455+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.456+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 9900)]
+[2025-07-11T11:03:07.456+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.457+0200] {url_query.py:390} INFO - https://www.ebi.ac.uk/chembl/api/data/assay.json
+[2025-07-11T11:03:07.457+0200] {url_query.py:391} INFO - [('assay_type', 'A'), ('assay_organism__iexact', 'Homo%20sapiens'), ('only', ['assay_type', 'description', 'assay_chembl_id', 'assay_organism']), ('limit', 20), ('offset', 19820)]
+[2025-07-11T11:03:07.457+0200] {url_query.py:392} INFO - From cache: True
+[2025-07-11T11:03:07.460+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-07-11T11:03:07.460+0200] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florent/Documents/projects/mol_harvester/airflow/dags/chembl_assay_etl.py", line 30, in fetch_chembl_assays
+    df.to_csv('~/Document/projects/mol_harvester/data/staging/test_etl.csv', index=False)
+  File "/home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/pandas/core/generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/pandas/io/formats/format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "/home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/pandas/io/formats/csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "/home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/pandas/io/common.py", line 749, in get_handle
+    check_parent_directory(str(handle))
+  File "/home/florent/Programs/anaconda3/envs/airflow_etl/lib/python3.11/site-packages/pandas/io/common.py", line 616, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: '/home/florent/Document/projects/mol_harvester/data/staging'
+[2025-07-11T11:03:07.463+0200] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=chembl_assay_etl, task_id=fetch_chembl_assays, run_id=manual__2025-06-17T14:03:29.552512+00:00, execution_date=20250617T140329, start_date=20250711T090307, end_date=20250711T090307
+[2025-07-11T11:03:07.469+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 5 for task fetch_chembl_assays (Cannot save file into a non-existent directory: '/home/florent/Document/projects/mol_harvester/data/staging'; 41975)
+[2025-07-11T11:03:07.509+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-07-11T11:03:07.518+0200] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-11T11:03:07.519+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

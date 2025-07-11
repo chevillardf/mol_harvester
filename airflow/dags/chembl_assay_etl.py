@@ -6,9 +6,9 @@ from chembl_webresource_client.new_client import new_client
 
 def fetch_chembl_assays():
     assay = new_client.assay
-    batch_size = 100
+    batch_size = 20
     offset = 0
-    max_records = 10000  # adjust as needed
+    max_records = 1000  # adjust as needed
 
     results = []
     while True:
@@ -27,7 +27,7 @@ def fetch_chembl_assays():
             break
 
     df = pd.DataFrame(results)
-    df.to_csv('~/Document/projects/mol_harvester/data/staging/test_etl.csv', index=False)
+    df.to_csv('~/Documents/projects/mol_harvester/data/staging/test_etl.csv', index=False)
 
 default_args = {
     'start_date': datetime(2025, 1, 1),
