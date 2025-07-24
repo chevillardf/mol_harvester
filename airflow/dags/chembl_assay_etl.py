@@ -27,7 +27,7 @@ def fetch_chembl_assays():
             break
 
     df = pd.DataFrame(results)
-    df.to_csv('~/Documents/projects/mol_harvester/data/staging/test_etl.csv', index=False)
+    df.to_csv('~/Documents/projects/mol_harvester/data/raw/test_etl.csv', index=False)
 
 default_args = {
     'start_date': datetime(2025, 1, 1),
